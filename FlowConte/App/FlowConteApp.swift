@@ -7,7 +7,10 @@ struct FlowConteApp: App {
 
     var container: ModelContainer = {
         let schema = Schema([ContentItem.self, ProjectItem.self])
-        let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        // UI tests opt into an isolated in-memory store so each test run starts
+        // from a clean slate without touching the real on-disk user data.
+        let isUITesting = ProcessInfo.processInfo.arguments.contains("-UITest_ResetStore")
+        let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: isUITesting)
         return try! ModelContainer(for: schema, configurations: [configuration])
     }()
 

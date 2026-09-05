@@ -45,6 +45,7 @@ struct ProjectDetailView: View {
                 Button(isEditing ? "保存" : "編集") {
                     isEditing.toggle()
                 }
+                .accessibilityIdentifier("projectEditSaveButton")
             }
         }
         .background(
@@ -61,6 +62,7 @@ struct ProjectDetailView: View {
                     TextField("プロジェクト名", text: $project.name)
                         .font(.title2.weight(.semibold))
                         .textFieldStyle(.plain)
+                        .accessibilityIdentifier("projectNameField")
                     TagEditor(tagNames: $project.tagNames, allTagNames: allTagNames)
                     Picker("条件", selection: Binding(
                         get: { ProjectFilterMode(rawValue: project.filterMode) ?? .or },
@@ -71,6 +73,7 @@ struct ProjectDetailView: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                    .accessibilityIdentifier("projectFilterModePicker")
                     Picker("並び順", selection: Binding(
                         get: { ProjectSortBy(rawValue: project.sortBy) ?? .createdAt },
                         set: { project.sortBy = $0.rawValue }
@@ -119,6 +122,7 @@ struct ProjectDetailView: View {
             Text("該当コンテンツ (\(filteredContents.count))")
                 .font(.caption)
                 .foregroundStyle(palette.textTertiary)
+                .accessibilityIdentifier("projectMatchCountLabel")
             ForEach(filteredContents) { item in
                 Button {
                     onSelectContent(item)
@@ -138,6 +142,7 @@ struct ProjectDetailView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("projectContentRow_\(item.title)")
             }
         }
     }

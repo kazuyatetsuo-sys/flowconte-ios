@@ -16,9 +16,7 @@ final class FlowConteUITests: XCTestCase {
 
         let titleField = app.textFields["contentTitleField"]
         XCTAssertTrue(titleField.waitForExistence(timeout: 5))
-        titleField.tap()
-        titleField.typeKey("a", modifierFlags: .command)
-        titleField.typeText("UIテストコンテンツ")
+        titleField.replaceText(with: "UIテストコンテンツ")
 
         let bodyEditor = app.textViews["contentBodyEditor"]
         XCTAssertTrue(bodyEditor.waitForExistence(timeout: 5))

@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		040A9D6FF6070F27D4047768 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E261906D6AB122ED30ED0 /* Color+Hex.swift */; };
+		0D305F5E0E4E7AEDF138D889 /* FlowConteProjectFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677B70D440FA4D48C54F096A /* FlowConteProjectFilterUITests.swift */; };
 		1EB540A914675AFFE5060D8B /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6CF843D119CBF8D386EC0 /* Palette.swift */; };
 		3346FD41AAAE612780FA40A2 /* TagFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712E377BD3FD3280FFE92780 /* TagFilterBar.swift */; };
 		3D170438300650E92CA89306 /* ThemeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FBBF6E5A3D4066A960E35 /* ThemeMode.swift */; };
 		44B1F9E18BE67E68961127EB /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443BD3CA15D040CC10346824 /* ProjectListView.swift */; };
 		5C0E7E9C15FE7DEEE7345771 /* RelatedContentEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79CD2F3ECA6F9AC98C5D1FF /* RelatedContentEditor.swift */; };
+		5D49F462C407A6008B614748 /* XCUIElement+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D6BA020CA47F768283AB3 /* XCUIElement+Helpers.swift */; };
 		62EB6F676D47F660329C71A7 /* TagChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB0173C8A9E0172356FC22 /* TagChip.swift */; };
 		7218F2D6213E683DD1689896 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEAED6168FA224C775AB93 /* RootView.swift */; };
 		822C514DB2967B7F37D9E38E /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4175F182D0813F41B0FFF4 /* ProjectDetailView.swift */; };
@@ -50,10 +52,12 @@
 		2E6C24CE830CCD2A9C192080 /* ReleaseChecklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseChecklist.swift; sourceTree = "<group>"; };
 		3A5B6454F873C970CEECB6B4 /* AppDateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDateFormat.swift; sourceTree = "<group>"; };
 		443BD3CA15D040CC10346824 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
+		471D6BA020CA47F768283AB3 /* XCUIElement+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Helpers.swift"; sourceTree = "<group>"; };
 		4AC3D5F8FA04667F525E02FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		591E26D79DC8C188BE518727 /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
 		673EB42999D40075DFD692DD /* FlowConteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConteUITests.swift; sourceTree = "<group>"; };
 		674E09E58188DA4E01CAF06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		677B70D440FA4D48C54F096A /* FlowConteProjectFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConteProjectFilterUITests.swift; sourceTree = "<group>"; };
 		712E377BD3FD3280FFE92780 /* TagFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterBar.swift; sourceTree = "<group>"; };
 		71F6CF843D119CBF8D386EC0 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		72643DB7A83C15E92ACD34BF /* FlowConteUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlowConteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +184,9 @@
 		8F03CE00DFE1EA31A41FB773 /* FlowConteUITests */ = {
 			isa = PBXGroup;
 			children = (
+				677B70D440FA4D48C54F096A /* FlowConteProjectFilterUITests.swift */,
 				673EB42999D40075DFD692DD /* FlowConteUITests.swift */,
+				471D6BA020CA47F768283AB3 /* XCUIElement+Helpers.swift */,
 			);
 			path = FlowConteUITests;
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D305F5E0E4E7AEDF138D889 /* FlowConteProjectFilterUITests.swift in Sources */,
 				995825408C2A47BE4ED6EE59 /* FlowConteUITests.swift in Sources */,
+				5D49F462C407A6008B614748 /* XCUIElement+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
