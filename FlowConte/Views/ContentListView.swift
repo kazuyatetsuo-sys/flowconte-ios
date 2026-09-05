@@ -12,18 +12,21 @@ struct ContentListView: View {
 
     var body: some View {
         ZStack {
-            List(selection: $selection) {
-                ForEach(contents) { item in
-                    ContentRow(item: item)
-                        .tag(item.id)
-                        .listRowBackground(
-                            selection == item.id ? palette.bgCardSelected : palette.bgCard
-                        )
+            palette.bgBase.ignoresSafeArea()
+
+            ScrollView {
+                LazyVStack(spacing: 8) {
+                    ForEach(contents) { item in
+                        Button {
+                            selection = item.id
+                        } label: {
+                            ContentRow(item: item, isSelected: selection == item.id)
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
+                .padding(12)
             }
-            .listStyle(.plain)
-            .scrollContentBackground(.hidden)
-            .background(palette.bgBase)
 
             Button("", action: onMoveUp)
                 .keyboardShortcut(.upArrow, modifiers: [])
@@ -41,6 +44,7 @@ struct ContentListView: View {
 
 private struct ContentRow: View {
     let item: ContentItem
+    let isSelected: Bool
     @Environment(\.palette) private var palette
 
     var body: some View {
@@ -74,6 +78,13 @@ private struct ContentRow: View {
                 }
             }
         }
-        .padding(.vertical, 4)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(isSelected ? palette.bgCardSelected : palette.bgCard)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(isSelected ? palette.accentLine : Color.clear, lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

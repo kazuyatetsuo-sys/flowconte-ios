@@ -11,6 +11,14 @@ struct FlowConteApp: App {
         return try! ModelContainer(for: schema, configurations: [configuration])
     }()
 
+    init() {
+        // SwiftUI's `.scrollContentBackground(.hidden)` alone leaves a residual
+        // opaque table background on some OS versions; forcing it clear here lets
+        // our own Palette-driven background paint through everywhere.
+        UITableView.appearance().backgroundColor = .clear
+        UICollectionView.appearance().backgroundColor = .clear
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
