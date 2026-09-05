@@ -16,6 +16,7 @@
 		62EB6F676D47F660329C71A7 /* TagChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB0173C8A9E0172356FC22 /* TagChip.swift */; };
 		7218F2D6213E683DD1689896 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEAED6168FA224C775AB93 /* RootView.swift */; };
 		822C514DB2967B7F37D9E38E /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4175F182D0813F41B0FFF4 /* ProjectDetailView.swift */; };
+		995825408C2A47BE4ED6EE59 /* FlowConteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673EB42999D40075DFD692DD /* FlowConteUITests.swift */; };
 		A4061A29D6C28331DFF99121 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591E26D79DC8C188BE518727 /* ContentListView.swift */; };
 		B30217D5154B316A55FA8496 /* TagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E6351DDC3551BC373B684 /* TagStore.swift */; };
 		B5B7B8EB3BC665DD0FF729B9 /* ProjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F2CE5A1EB1C2EDB763259 /* ProjectItem.swift */; };
@@ -32,6 +33,16 @@
 		FF5A08BF5A0147E0FE616DC2 /* TagEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CA87C2AD6242978BCFD052 /* TagEditor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		88C67ABFA3A56BAF1A26704D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A31A45BD0DB07D5761DEEACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEBFD1DD6032276A7A7D6AD9;
+			remoteInfo = FlowConte;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0CBB0173C8A9E0172356FC22 /* TagChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagChip.swift; sourceTree = "<group>"; };
 		13EEAED6168FA224C775AB93 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -41,9 +52,11 @@
 		443BD3CA15D040CC10346824 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		4AC3D5F8FA04667F525E02FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		591E26D79DC8C188BE518727 /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
+		673EB42999D40075DFD692DD /* FlowConteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConteUITests.swift; sourceTree = "<group>"; };
 		674E09E58188DA4E01CAF06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		712E377BD3FD3280FFE92780 /* TagFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterBar.swift; sourceTree = "<group>"; };
 		71F6CF843D119CBF8D386EC0 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		72643DB7A83C15E92ACD34BF /* FlowConteUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlowConteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5FBBF6E5A3D4066A960E35 /* ThemeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeMode.swift; sourceTree = "<group>"; };
 		87CA87C2AD6242978BCFD052 /* TagEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagEditor.swift; sourceTree = "<group>"; };
 		903E261906D6AB122ED30ED0 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -112,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				244BC538D168B3413682275B /* FlowConte.app */,
+				72643DB7A83C15E92ACD34BF /* FlowConteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,10 +177,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8F03CE00DFE1EA31A41FB773 /* FlowConteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				673EB42999D40075DFD692DD /* FlowConteUITests.swift */,
+			);
+			path = FlowConteUITests;
+			sourceTree = "<group>";
+		};
 		986D37E6B7F0DF7DFCD7A483 = {
 			isa = PBXGroup;
 			children = (
 				0FC8BA5A2D12F020F1E1AA33 /* FlowConte */,
+				8F03CE00DFE1EA31A41FB773 /* FlowConteUITests */,
 				3289EAA0812C82EE7DD9D508 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +206,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D5181A1E3C7C9BDED6980CEC /* FlowConteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2F640C6D884359E0715AB8 /* Build configuration list for PBXNativeTarget "FlowConteUITests" */;
+			buildPhases = (
+				A2491634D61FD33E77F60C5D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FEA9872ABAE90E956CB06EF /* PBXTargetDependency */,
+			);
+			name = FlowConteUITests;
+			packageProductDependencies = (
+			);
+			productName = FlowConteUITests;
+			productReference = 72643DB7A83C15E92ACD34BF /* FlowConteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		DEBFD1DD6032276A7A7D6AD9 /* FlowConte */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CD17441B8D6E07B1A73501C /* Build configuration list for PBXNativeTarget "FlowConte" */;
@@ -210,6 +251,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					D5181A1E3C7C9BDED6980CEC = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = DEBFD1DD6032276A7A7D6AD9;
+					};
 					DEBFD1DD6032276A7A7D6AD9 = {
 						ProvisioningStyle = Automatic;
 					};
@@ -230,6 +275,7 @@
 			projectRoot = "";
 			targets = (
 				DEBFD1DD6032276A7A7D6AD9 /* FlowConte */,
+				D5181A1E3C7C9BDED6980CEC /* FlowConteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +321,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2491634D61FD33E77F60C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995825408C2A47BE4ED6EE59 /* FlowConteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FEA9872ABAE90E956CB06EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEBFD1DD6032276A7A7D6AD9 /* FlowConte */;
+			targetProxy = 88C67ABFA3A56BAF1A26704D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6484E21E27E84114DE33E1F7 /* Release */ = {
@@ -376,6 +438,24 @@
 			};
 			name = Debug;
 		};
+		A9B9720074888709C05F1BDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oaksand.flowconte.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowConte;
+			};
+			name = Debug;
+		};
 		BDF2B9DAFDA1F80787B4B988 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -441,6 +521,24 @@
 			};
 			name = Debug;
 		};
+		E33B339F3B7D8440E6A37318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oaksand.flowconte.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowConte;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +547,15 @@
 			buildConfigurations = (
 				82DDED36495F8E7254AED5FC /* Debug */,
 				791FCAD42DE61CA71960A5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BB2F640C6D884359E0715AB8 /* Build configuration list for PBXNativeTarget "FlowConteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B9720074888709C05F1BDE /* Debug */,
+				E33B339F3B7D8440E6A37318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

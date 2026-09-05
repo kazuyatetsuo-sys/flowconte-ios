@@ -105,6 +105,7 @@ struct RootView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
+                .accessibilityIdentifier("newItemButton")
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
@@ -112,6 +113,7 @@ struct RootView: View {
                 } label: {
                     Image(systemName: "gearshape")
                 }
+                .accessibilityIdentifier("settingsButton")
             }
         }
     }

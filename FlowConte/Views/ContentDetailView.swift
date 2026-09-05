@@ -46,6 +46,7 @@ struct ContentDetailView: View {
                 Button(isEditing ? "保存" : "編集") {
                     toggleEditing()
                 }
+                .accessibilityIdentifier("editSaveButton")
             }
         }
         .toolbar(writingMode ? .hidden : .visible, for: .navigationBar)
@@ -79,6 +80,7 @@ struct ContentDetailView: View {
                 TextField("タイトル", text: $content.title)
                     .font(.title2.weight(.semibold))
                     .textFieldStyle(.plain)
+                    .accessibilityIdentifier("contentTitleField")
             } else {
                 Text(content.title)
                     .font(.title2.weight(.semibold))
@@ -106,6 +108,7 @@ struct ContentDetailView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .font(.body)
                     .foregroundStyle(palette.textBody)
+                    .accessibilityIdentifier("contentBodyEditor")
             } else {
                 MarkdownView(text: content.body)
             }
@@ -186,6 +189,7 @@ struct ContentDetailView: View {
             }
             .buttonStyle(.borderedProminent)
             .tint(content.released ? palette.accent : palette.border)
+            .accessibilityIdentifier("releaseButton")
         }
     }
 

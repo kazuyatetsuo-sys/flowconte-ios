@@ -7,23 +7,18 @@ struct ProjectListView: View {
     @Environment(\.palette) private var palette
 
     var body: some View {
-        ZStack {
-            palette.bgBase.ignoresSafeArea()
-
-            ScrollView {
-                LazyVStack(spacing: 8) {
-                    ForEach(projects) { project in
-                        Button {
-                            selection = project.id
-                        } label: {
-                            ProjectRow(project: project, isSelected: selection == project.id)
-                        }
-                        .buttonStyle(.plain)
-                    }
-                }
-                .padding(12)
+        List(selection: $selection) {
+            ForEach(projects) { project in
+                ProjectRow(project: project, isSelected: selection == project.id)
+                    .tag(project.id)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
             }
         }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(palette.bgBase)
     }
 }
 
@@ -51,5 +46,7 @@ private struct ProjectRow: View {
                 .stroke(isSelected ? palette.accentLine : Color.clear, lineWidth: 1)
         )
         .clipShape(RoundedRectangle(cornerRadius: 10))
+        .contentShape(Rectangle())
+        .accessibilityIdentifier("projectRow_\(project.name)")
     }
 }

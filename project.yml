@@ -39,3 +39,16 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         GENERATE_INFOPLIST_FILE: NO
+  FlowConteUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: FlowConteUITests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.oaksand.flowconte.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: FlowConte
+    dependencies:
+      - target: FlowConte

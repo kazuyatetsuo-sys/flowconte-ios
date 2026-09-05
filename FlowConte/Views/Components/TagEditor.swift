@@ -33,8 +33,10 @@ struct TagEditor: View {
                 TextField("タグを追加…", text: $draft)
                     .textFieldStyle(.plain)
                     .onSubmit { commitDraft() }
+                    .accessibilityIdentifier("tagDraftField")
                 Button("追加") { commitDraft() }
                     .disabled(draft.trimmingCharacters(in: .whitespaces).isEmpty)
+                    .accessibilityIdentifier("tagAddButton")
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
