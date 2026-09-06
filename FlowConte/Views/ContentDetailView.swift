@@ -106,13 +106,8 @@ struct ContentDetailView: View {
     private var bodySection: some View {
         Group {
             if isEditing {
-                TextEditor(text: $content.body)
+                MarkdownTextEditor(text: $content.body, palette: palette)
                     .frame(minHeight: writingMode ? 500 : 220)
-                    .padding(8)
-                    .background(palette.bgPanel)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .font(.body)
-                    .foregroundStyle(palette.textBody)
                     .accessibilityIdentifier("contentBodyEditor")
             } else {
                 MarkdownView(text: content.body)

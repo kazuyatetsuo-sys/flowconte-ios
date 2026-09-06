@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 struct MarkdownBlock: Identifiable {
     enum Kind {
