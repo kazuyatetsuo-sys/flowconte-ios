@@ -19,14 +19,14 @@ struct ContentListView: View {
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
+                        .focusEffectDisabled()
+                        .hoverEffectDisabled()
                 }
             }
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
             .background(palette.bgBase)
             .paletteAware()
-            .focusEffectDisabled()
-            .hoverEffectDisabled()
 
             Button("", action: onMoveUp)
                 .keyboardShortcut(.upArrow, modifiers: [])
