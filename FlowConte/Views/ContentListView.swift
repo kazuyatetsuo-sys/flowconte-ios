@@ -24,17 +24,22 @@ struct ContentListView: View {
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
             .background(palette.bgBase)
+            .paletteAware()
+            .focusEffectDisabled()
+            .hoverEffectDisabled()
 
             Button("", action: onMoveUp)
                 .keyboardShortcut(.upArrow, modifiers: [])
                 .opacity(0)
                 .frame(width: 0, height: 0)
                 .disabled(isEditingDetail)
+                .focusable(false)
             Button("", action: onMoveDown)
                 .keyboardShortcut(.downArrow, modifiers: [])
                 .opacity(0)
                 .frame(width: 0, height: 0)
                 .disabled(isEditingDetail)
+                .focusable(false)
         }
     }
 }
@@ -78,10 +83,6 @@ private struct ContentRow: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(10)
         .background(isSelected ? palette.bgCardSelected : palette.bgCard)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(isSelected ? palette.accentLine : Color.clear, lineWidth: 1)
-        )
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .contentShape(Rectangle())
         .accessibilityIdentifier("contentRow_\(item.title)")

@@ -27,6 +27,7 @@ struct FlowConteApp: App {
             RootView()
                 .preferredColorScheme(themeStore.mode.preferredColorScheme)
                 .environment(themeStore)
+                .paletteAware()
         }
         .modelContainer(container)
     }

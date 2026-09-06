@@ -14,11 +14,13 @@ struct ProjectListView: View {
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
+                    .focusEffectDisabled()
             }
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
         .background(palette.bgBase)
+        .paletteAware()
     }
 }
 
@@ -41,10 +43,6 @@ private struct ProjectRow: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(10)
         .background(isSelected ? palette.bgCardSelected : palette.bgCard)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(isSelected ? palette.accentLine : Color.clear, lineWidth: 1)
-        )
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .contentShape(Rectangle())
         .accessibilityIdentifier("projectRow_\(project.name)")

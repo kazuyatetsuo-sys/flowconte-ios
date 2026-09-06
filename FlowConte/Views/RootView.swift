@@ -49,7 +49,6 @@ struct RootView: View {
                 detail
             }
         }
-        .paletteAware()
         .background(
             Button("", action: createNewContent)
                 .keyboardShortcut(.return, modifiers: [.command, .control])
