@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct Palette {
+    let scheme: ColorScheme
     let bgBase: Color
     let bgPanel: Color
     let bgCard: Color
@@ -17,6 +18,7 @@ struct Palette {
     let borderSoft: Color
 
     static let dark = Palette(
+        scheme: .dark,
         bgBase: Color(hex: "1b1917"),
         bgPanel: Color(hex: "211e1b"),
         bgCard: Color(hex: "292520"),
@@ -34,6 +36,7 @@ struct Palette {
     )
 
     static let day = Palette(
+        scheme: .light,
         bgBase: Color(hex: "f7f5f0"),
         bgPanel: Color(hex: "f1eee7"),
         bgCard: Color(hex: "ffffff"),

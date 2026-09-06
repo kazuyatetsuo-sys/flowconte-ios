@@ -34,6 +34,8 @@ struct ContentDetailView: View {
                 }
             }
             .padding(20)
+            .frame(maxWidth: 760, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .background(palette.bgBase)
         .toolbar {
@@ -50,6 +52,9 @@ struct ContentDetailView: View {
             }
         }
         .toolbar(writingMode ? .hidden : .visible, for: .navigationBar)
+        .toolbarBackground(palette.bgPanel, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(palette.scheme, for: .navigationBar)
         .overlay(alignment: .topTrailing) {
             if writingMode {
                 Button {

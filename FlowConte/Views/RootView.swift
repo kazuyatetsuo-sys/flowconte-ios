@@ -116,6 +116,9 @@ struct RootView: View {
                 .accessibilityIdentifier("settingsButton")
             }
         }
+        .toolbarBackground(palette.bgPanel, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(palette.scheme, for: .navigationBar)
     }
 
     @ViewBuilder

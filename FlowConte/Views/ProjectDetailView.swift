@@ -38,6 +38,8 @@ struct ProjectDetailView: View {
                 contentListSection
             }
             .padding(20)
+            .frame(maxWidth: 760, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .background(palette.bgBase)
         .toolbar {
@@ -48,6 +50,9 @@ struct ProjectDetailView: View {
                 .accessibilityIdentifier("projectEditSaveButton")
             }
         }
+        .toolbarBackground(palette.bgPanel, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(palette.scheme, for: .navigationBar)
         .background(
             Button("", action: { isEditing.toggle() })
                 .keyboardShortcut(.return, modifiers: .command)
